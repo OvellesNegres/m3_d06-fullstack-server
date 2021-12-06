@@ -1,7 +1,4 @@
 export default function createResponseObject(data, message, error){
-  return {
-    error: null,
-    data: null,
-    message: null
-  }
+  if(Array.isArray(data)) return {data}
+  else  return { data: [data] }
 }
